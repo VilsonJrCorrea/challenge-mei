@@ -4,15 +4,23 @@
 ##### [MongoDB Community Server - Version: 4.0.10](https://www.mongodb.com/) 
 ##### [Node.js - Version: 10.16.0](https://nodejs.org) 
 
+## Configuring the environment
+Create a file `.env` with the environment variables looks like in file `env.example`.
 
 ## Installation
-You can install and start using `npm`:
+You can install using `npm`:
 
-`npm install & npm run dev`
+`npm install`
 
-Or you can install and start using `yarn`:
+Or you can install using `yarn`:
+`yarn`
 
-`yarn & yarn dev`
+## Running
+You can run using `npm`
+`npm run dev`
+
+Or you can run using `yarn`
+`yarn dev`
 
 ## Routes
 
