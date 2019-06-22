@@ -41,9 +41,11 @@ Or you can install using `yarn`:
 
 ## Running
 You can run using `npm`
+
 `npm run dev`
 
 Or you can run using `yarn`
+
 `yarn dev`
 
 ## Routes
