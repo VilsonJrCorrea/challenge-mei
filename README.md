@@ -1,11 +1,34 @@
 # Read-me - Challenge MEI-Fácil 
 
-## Build With
+Project built following the book of community [Node Best Practices](https://github.com/i0natan/nodebestpractices)
+
+## Built With
 ##### [MongoDB Community Server - Version: 4.0.10](https://www.mongodb.com/) 
 ##### [Node.js - Version: 10.16.0](https://nodejs.org) 
 
 ## Configuring the environment
 Create a file `.env` with the environment variables looks like in file `env.example`.
+
+## Creating seeds in the database
+You can run the seeds using `npm`:
+
+`npm run seeds`
+
+Or you can run the seeds using `yarn`:
+
+`yarn seeds`
+
+
+
+## Testing
+You can test using `npm`:
+
+`npm run test`
+
+Or you can test using `yarn`:
+
+`yarn test`
+
 
 ## Installation
 You can install using `npm`:
@@ -13,6 +36,7 @@ You can install using `npm`:
 `npm install`
 
 Or you can install using `yarn`:
+
 `yarn`
 
 ## Running
@@ -24,24 +48,59 @@ Or you can run using `yarn`
 
 ## Routes
 
-### Payment
-> Performs the payment in the system, debit value in an origin accounnt and credit in destiny account.
+### Account
+The account of a client.
+
+**Paths**
+
+| Method HTTP | Path    | 
+|----------|---------|
+|GET ALL     |`api/accounts`     | 
+|GET BY ID   |`api/accounts/:id` |
+|POST        |`api/accounts`     | 
+|PUT      |`api/accounts/:id` |
+|DELETE      |`api/accounts/:id` |
 
 **Arguments**
 
 | Argument | Type    | 
 |----------|---------|
-|`value`               |*double* | 
-|`plots`               |*integer* |
-|`originAccout`        |*integer* | 
-|`destinyAccount`      |*integer*|
+|`cpf`               |*string* | 
+|`balance`           |*number* |
 
-
-
-**Path**
+**Body example**
+```json 
+{
+	"cpf":"007.251.150-84",
+	"balance":5000.75
+}
 ```
-POST api/pagamento
-```
+
+
+### Payment
+Performs the payment in the system, debit value in an origin accounnt and credit in destiny account.
+
+**Paths**
+
+| Method HTTP | Path    | 
+|----------|---------|
+|GET ALL     |`api/payments`     | 
+|GET BY ID   |`api/payments/:id` |
+|POST        |`api/payments`     | 
+|DELETE      |`api/payments/:id` |
+
+
+**Arguments**
+
+| Argument | Type    | 
+|----------|---------|
+|`value`               |*number* | 
+|`plots`               |*number* |
+|`originAccout`        |*number* | 
+|`destinyAccount`      |*number*|
+
+
+
 **Body example**
 
 ```json 
