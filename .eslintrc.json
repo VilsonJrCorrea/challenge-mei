@@ -23,6 +23,7 @@
     "func-names": "off",
     "consistent-return": "off",
     "no-unused-labels": "warn",
-    "no-underscore-dangle": "error"
+    "no-underscore-dangle": "off",
+    "global-require": "off"
   }
 }
