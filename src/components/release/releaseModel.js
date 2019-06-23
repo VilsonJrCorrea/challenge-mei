@@ -8,15 +8,14 @@ const release = {
   plots: {
     type: Number,
   },
-  originAccout: {
+  originAccount: {
     type: Number,
   },
   destinyAccount: {
     type: Number,
   },
-  data: {
-    type: Date,
-    default: Date.now,
+  date: {
+    type: String,
   },
 };
 
