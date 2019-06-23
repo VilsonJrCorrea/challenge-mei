@@ -9,15 +9,17 @@ Project built following the book of community [Node Best Practices](https://gith
 ## Configuring the environment
 Create a file `.env` with the environment variables looks like in file `env.example`.
 
+## Configuring the test environment 
+Create a file `.env.test` with the environment variables looks like in file `env.example`.
+
 ## Creating seeds in the database
 You can run the seeds using `npm`:
 
-`npm run seeds`
+`npm run seed`
 
 Or you can run the seeds using `yarn`:
 
-`yarn seeds`
-
+`yarn seed`
 
 
 ## Testing
@@ -113,6 +115,45 @@ Performs the payment in the system, debit value in an origin accounnt and credit
     "destinyAccount":1313
 }
 ```
+
+
+### Release
+Performs the payment with the date in the system, debit value in an origin accounnt and credit in destiny account.
+
+**Paths**
+
+| Method HTTP | Path    | 
+|----------|---------|
+|GET ALL     |`api/releases`     | 
+|GET BY ID   |`api/releases/:id` |
+|POST        |`api/releases`     | 
+|DELETE      |`api/releases/:id` |
+
+
+**Arguments**
+
+| Argument | Type    | 
+|----------|---------|
+|`value`               |*number* | 
+|`plots`               |*number* |
+|`originAccout`        |*number* | 
+|`destinyAccount`      |*number*|
+|`date`                |*string*|
+
+
+
+**Body example**
+
+```json 
+{
+    "value":100,
+    "plots":5,
+    "originAccount":8080,
+    "destinyAccount":1313,
+    "date":"10/10/10"
+}
+```
+
 
 
 ## Theoretical questions
