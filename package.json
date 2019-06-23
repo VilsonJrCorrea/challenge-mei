@@ -6,8 +6,9 @@
   "author": "Vilson Junior <vilsonjrcorrea@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "start": "node ./src/",
     "dev": "nodemon ./src/ --ignore __tests__",
-    "seed": "NODE_ENV=dev node ./src/database/seed.js",
+    "seed": "NODE_ENV=test node ./src/database/seed.js",
     "test": "NODE_ENV=test jest --verbose --watchAll"
   },
   "devDependencies": {
